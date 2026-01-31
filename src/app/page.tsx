@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from "next/link";
 
-const githubLink: string = "https://github.com/Olane123/mynotes";
+const githubLink: string = "https://github.com/Olane123/My-Notes-On-Next-JS";
 const githubImage: string = "/GithubIcon.png";
 
 export default function Home() {
