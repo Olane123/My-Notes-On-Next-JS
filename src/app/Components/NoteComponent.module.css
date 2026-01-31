@@ -1,0 +1,271 @@
+﻿/* Контейнеры */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.inputContainer {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #77564D;
+    padding: 25px;
+    font-family: Manrope, serif;
+    margin: 0 auto 40px;
+}
+
+/* Стили для добавления заметки */
+.inputGeneral {
+    display: flex;
+    width: 100%;
+    background-color: #EBDCB8;
+    border-radius: 50px;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.inputCheckboxContainer {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: #EAE0C8;
+    padding: 25px;
+    border-radius: 50px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.inputCheckbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    font-size: 32px;
+    color: #593B3B;
+    top: 25px;
+    left: 25px;
+}
+
+.inputCheckbox:hover {
+    width: 60px;
+    height: 60px;
+    top: 15px;
+    left: 15px;
+}
+
+.inputCheckboxHidden {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.inputNoteName {
+    flex: 1;
+    height: 4rem;
+    padding: 0 24px;
+    border: transparent;
+    border-radius: 36px;
+    background-color: #CABA93;
+    font-size: 56px;
+    color: #EAE0C8;
+    cursor: text;
+    min-width: 0;
+    font-family: inherit;
+}
+
+.inputNoteName::placeholder {
+    color: #EAE0C8;
+    opacity: 0.8;
+}
+
+.inputNoteName:active, .inputNoteName:hover, .inputNoteName:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.inputAddTodo {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.inputAddTodo:hover {
+    width: 80px;
+    height: 80px;
+}
+
+/* Список заметок */
+.notesListContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto 40px;
+}
+
+.noteButton {
+    padding: 15px 20px;
+    background-color: #77564D;
+    color: rgba(234, 224, 200, 1);
+    border: none;
+    border-radius: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.noteButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.noteButton.done {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Контейнер выбранной заметки */
+.todoContainer {
+    width: 95%;
+    padding: 25px;
+    background-color: #77564D;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0 auto;
+}
+
+.noteHeader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.noteName {
+    color: rgba(234, 224, 200, 1);
+    font-size: 32px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.checkboxContainer {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    background-color: #EAE0C8;
+    border-radius: 50px;
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.checkbox {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #593B3B;
+    user-select: none;
+}
+
+.checkbox:hover {
+    height: 60px;
+    width: 60px;
+    top: 15px;
+    left: 15px;
+}
+
+.checkboxHidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.noteDate {
+    color: rgba(234, 224, 200, 0.8);
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.notesField {
+    width: 100%;
+    min-height: 64px;
+    border-radius: 25px;
+    padding: 20px;
+    background: rgba(172, 158, 139, 1);
+    border: none;
+    box-sizing: border-box;
+    resize: vertical;
+    color: #EAE0C8;
+    overflow-wrap: break-word;
+    line-height: 1.4;
+    font-size: 28px;
+    cursor: text;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.notesField::placeholder {
+    color: rgba(234, 224, 200, 0.7);
+}
+
+.notesField:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(89, 59, 59, 0.3);
+}
+
+.deleteNote {
+    padding: 12px 24px;
+    background-color: #593B3B;
+    color: rgba(234, 224, 200, 1);
+    border: none;
+    border-radius: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.deleteNote:hover {
+    padding: 15px 30px;
+    background-color: #4a2f2f;
+}
+
+/* Сообщение об отсутствии заметок */
+.noNotes {
+    text-align: center;
+    color: #77564D;
+    font-size: 24px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    width: 100%;
+}
