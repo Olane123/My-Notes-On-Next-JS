@@ -155,7 +155,6 @@ export default function NotesComponent() {
                         className={styles.inputAddTodo}
                         aria-label="Добавить заметку"
                     >
-                        {/* Вместо изображения используем SVG или текст */}
                         <span style={{ fontSize: '40px', color: '#593B3B' }}>+</span>
                     </button>
                 </div>
